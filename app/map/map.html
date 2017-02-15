@@ -1,0 +1,7 @@
+<ul class="menu">
+    <li><a ui-sref=".category_places">Categories</a></li>
+    <li><a ui-sref=".heat_map">Heat Map</a></li>
+    <li><a ui-sref=".top_five">Top Five</a></li>
+</ul>
+<div ui-view></div>
+<leaflet lf-center="userPosition" markers="markers" layers="layers" event-broadcast="events" height="480px" width="640px"></leaflet>

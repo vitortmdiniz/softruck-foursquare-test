@@ -1,0 +1,11 @@
+<p>This functionality list the venues around you filtered by category. You can also filter by distance:</p>
+<select
+        ng-model="data.chosen_category"
+        ng-options="option.name for option in categories track by option.id"
+        ng-change="getPlacesByDistance()">
+    <option value="" disabled selected>Select a category</option>
+</select>
+<hr/>
+<input type="text" ng-disabled="!data.chosen_category" ng-model="data.distance" ng-change="filterByDistance()"  placeholder="Set a distance (in miles)"/>
+<p style="color:red" ng-show="isNaN(data.distance)" >Invalid distance </p>
+<br/><br/>
